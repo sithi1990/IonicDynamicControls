@@ -1,0 +1,827 @@
+{
+    "dataGroups": [
+        {
+            "title": "Helpdesk Ticket #",
+            "informations": [],
+            "parameters": null,
+            "fields": [
+                {
+                    "type": "editor",
+                    "caption": null,
+                    "value": "223721822",
+                    "parameters": {
+                        "maxLength": "50"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "New Employee/Contractor Information Below:",
+            "informations": [],
+            "parameters": null,
+            "fields": [
+                {
+                    "type": "editor",
+                    "title": "Hiring Supervisor (Last, First MI):",
+                    "info": null,
+                    "value": "John Papa",
+                    "parameters": {
+                        "maxLength": "300",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null,
+                        "defaultValue": null
+                    },
+                    "fieldId": "hiringSupervisor",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter hiring supervisor name"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "New Hires Name (Last, First MI ) No nicknames:",
+                    "info": null,
+                    "value": "Sithira Pathirana",
+                    "parameters": {
+                        "maxLength": "300",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null,
+                        "defaultValue": null
+                    },
+                    "fieldId": "newHiresName",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter New Hires Name"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Clock#:",
+                    "info": null,
+                    "value": "12345",
+                    "parameters": {
+                        "maxLength": "50",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null,
+                        "defaultValue": null
+                    },
+                    "fieldId": "clockNo",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Clock value"
+                        },
+                        {
+                            "type": "regex-validation",
+                            "regex": "clockNoValidationRegex",
+                            "message": "Invalid clock number"
+                        }
+                    ]
+                },
+                {
+                    "type": "phone-number",
+                    "title": "Phone#:",
+                    "info": null,
+                    "value": "0123456789",
+                    "parameters": {
+                        "maxLength": "10",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null,
+                        "defaultValue": "0123-456-789"
+                    },
+                    "fieldId": "phone",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Phone Number"
+                        },
+                        {
+                            "type": "regex-validation",
+                            "regex": "<phoneNumberValidationRegex>",
+                            "message": "Invalid Phone Number"
+                        }
+                    ]
+                },
+                {
+                    "type": "datetime",
+                    "title": "Start Date#:",
+                    "info": null,
+                    "value": "05/21/2018",
+                    "parameters": {
+                        "format": "MM/dd/yyyy",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null,
+                        "defaultValue": "mm/dd/yyyy"
+                    },
+                    "fieldId": "startDate",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Start Date"
+                        },
+                        {
+                            "type": "regex-validation",
+                            "regex": "<dateTimeValidationRegex>",
+                            "message": "Invalid Start Date"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "title": "New Hire Is:",
+                    "info": null,
+                    "value": 2,
+                    "parameters": {
+                        "selectionType": "single-select",
+                        "items": [
+                            {
+                                "key": "1",
+                                "value": "Prmanent PW Employee (Blue Badge)"
+                            },
+                            {
+                                "key": "2",
+                                "value": "Co-op/Intern"
+                            },
+                            {
+                                "key": "3",
+                                "value": "Contractor"
+                            },
+                            {
+                                "key": "4",
+                                "value": "Forign National"
+                            },
+                            {
+                                "key": "5",
+                                "value": "Excutive"
+                            }
+                        ],
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null
+                    },
+                    "fieldId": "newHireType",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please select new hire type"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "title": "Work Location:",
+                    "info": [
+                        {
+                            "type": "info-text",
+                            "caption": "Only one of the following boxes should be checked",
+                            "parameters": {
+                                "url": null,
+                                "captionUrlStartIndex": null,
+                                "captionUrlEndIndex": null
+                            }
+                        }
+                    ],
+                    "value": 2,
+                    "parameters": {
+                        "selectionType": "single-select",
+                        "items": [
+                            {
+                                "key": "1",
+                                "value": "East Hartford"
+                            },
+                            {
+                                "key": "2",
+                                "value": "Florida"
+                            },
+                            {
+                                "key": "3",
+                                "value": "Middletown"
+                            },
+                            {
+                                "key": "4",
+                                "value": "IAE"
+                            },
+                            {
+                                "key": "5",
+                                "value": "N. Berwick"
+                            },
+                            {
+                                "key": "6",
+                                "value": "Georgia"
+                            },
+                            {
+                                "key": "7",
+                                "value": "Other (Provide shipping address in location comments below):",
+                                "fields": [
+                                    {
+                                        "type": "editor-multiline",
+                                        "title": "Location Comments",
+                                        "info": [
+                                            {
+                                                "type": "info-text",
+                                                "caption": "If remote- include complete mailing address & phone number for equipment deliver",
+                                                "parameters": null
+                                            }
+                                        ],
+                                        "value": null,
+                                        "parameters": {
+                                            "maxLength": "300",
+                                            "titleUrl": null,
+                                            "titleUrlStartIndex": null,
+                                            "titleUrlEndIndex": null
+                                        },
+                                        "fieldId": "locationComment",
+                                        "validators": [
+                                            {
+                                                "type": "mandatory-validation",
+                                                "regex": null,
+                                                "message": "Please enter Location Comment"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null
+                    },
+                    "fieldId": "workLocation",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please select work location"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Building/Floor:",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "maxLength": "50",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null
+                    },
+                    "fieldId": "buildingOrFloor",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Building/Floor"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Closest Column No:",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "maxLength": "50",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null
+                    },
+                    "fieldId": "closestColumnNo",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Closest Column Number"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Department:",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "maxLength": "50",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null
+                    },
+                    "fieldId": "department",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Department"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Seat No:",
+                    "info": [
+                        {
+                            "type": "info-popup",
+                            "caption": "If no seat numbers available then enter the nearest Telecommunications Closet # and Block # found on the data jack at the location (i.e. Closet T435 Block D124)",
+                            "parameters": null
+                        }
+                    ],
+                    "value": null,
+                    "parameters": {
+                        "maxLength": "50",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null
+                    },
+                    "fieldId": "seatNo",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Seat Number"
+                        }
+                    ]
+                },
+                {
+                    "type": "boolean",
+                    "title": "Has desk location been approved by Move Coordinator?",
+                    "info": [
+                        {
+                            "type": "info-text",
+                            "caption": "If NO, contact your local move coordinato",
+                            "parameters": {
+                                "url": "http://pwww.eh.pweh.com/faclsvcs/web/office_moves_move_process_details.html",
+                                "urlStartIndex": "0",
+                                "urlendIndex": "10"
+                            }
+                        }
+                    ],
+                    "value": null,
+                    "parameters": null,
+                    "fieldId": "deskLocationApproved",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter select yes or no"
+                        }
+                    ]
+                },
+                {
+                    "type": "datetime",
+                    "title": "Date seat is available for occupancy:",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "format": "MM/dd/yyyy",
+                        "titleUrl": null,
+                        "titleUrlStartIndex": null,
+                        "titleUrlEndIndex": null,
+                        "defaultValue": "mm/dd/yyyy"
+                    },
+                    "fieldId": "destAvailableDate",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter select yes or no"
+                        },
+                        {
+                            "type": "regex-validation",
+                            "regex": "<dateTimeValidationRegex>",
+                            "message": "Invalid Date Seat Available"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Equipment Billing Information",
+            "informations": [],
+            "fields": [
+                {
+                    "type": "editor",
+                    "title": "Bill equipment to Cost Center:",
+                    "info": null,
+                    "value": "Cost Center 1",
+                    "parameters": {
+                        "maxLength": "200"
+                    },
+                    "fieldId": "billEquiepmentToCostCenter",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Bill equipment to Cost Center"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Financial Approver (Last, First):",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "maxLength": "200"
+                    },
+                    "fieldId": "financialApprover",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Financial Approver"
+                        }
+                    ]
+                },
+                {
+                    "type": "editor",
+                    "title": "Approver Clock#:",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "maxLength": "50"
+                    },
+                    "fieldId": "clock",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please enter Approver Clock value"
+                        },
+                        {
+                            "type": "regex-validation",
+                            "regex": "clockValidationRegex",
+                            "message": "Invalid Approver Clock"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Standard Equipment/Systems Needs",
+            "parameters": {
+                "titleUrl": null,
+                "titleUrlStartIndex": null,
+                "titleUrlEndIndex": null
+            },
+            "info": [
+                {
+                    "type": "info-text",
+                    "caption": "Check ONE (1) Equipment Type As Appropriate",
+                    "parameters": {
+                        "url": null,
+                        "urlStartIndex": null,
+                        "urlendIndex": null
+                    }
+                }
+            ],
+            "fields": [
+                {
+                    "type": "list",
+                    "title": "Re-Image Existing Device at work location:",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "selectionType": "single-select",
+                        "items": [
+                            {
+                                "key": "1",
+                                "value": "Yes",
+                                "fields": [
+                                    {
+                                        "type": "editor",
+                                        "title": "Asset Tag#",
+                                        "info": null,
+                                        "value": null,
+                                        "parameters": {
+                                            "maxLength": "50"
+                                        },
+                                        "fieldId": "financialApprover",
+                                        "validators": [
+                                            {
+                                                "type": "mandatory-validation",
+                                                "regex": null,
+                                                "message": "Please enter Asset Tag Number"
+                                            },
+                                            {
+                                                "type": "regex-validation",
+                                                "regex": "<numericValidation>",
+                                                "message": "Invalid Asset Tag Number"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "2",
+                                "value": "No",
+                                "fields": [
+                                    {
+                                        "type": "list",
+                                        "title": "Office class devices",
+                                        "info": null,
+                                        "value": 2,
+                                        "parameters": {
+                                            "selectionType": "single-select",
+                                            "items": [
+                                                {
+                                                    "key": "1",
+                                                    "value": "Standard Desktop"
+                                                },
+                                                {
+                                                    "key": "2",
+                                                    "value": "Standard Laptop Undocked"
+                                                },
+                                                {
+                                                    "key": "3",
+                                                    "value": "Standard Laptop Docked"
+                                                },
+                                                {
+                                                    "key": "4",
+                                                    "value": "Lightweight Laptop Undocked"
+                                                },
+                                                {
+                                                    "key": "5",
+                                                    "value": "Lightweight Laptop Docked"
+                                                }
+                                            ]
+                                        },
+                                        "fieldId": "selectedOfficeClassDevice",
+                                        "validators": [
+                                            {
+                                                "type": "mandatory-validation",
+                                                "regex": null,
+                                                "message": "Please select one equipment"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "list",
+                                        "title": "Engineering Class Devices",
+                                        "info": null,
+                                        "value": 2,
+                                        "parameters": {
+                                            "selectionType": "single-select",
+                                            "items": [
+                                                {
+                                                    "key": "6",
+                                                    "value": "Engineering Workstation"
+                                                },
+                                                {
+                                                    "key": "7",
+                                                    "value": "Engineering Desktop"
+                                                },
+                                                {
+                                                    "key": "8",
+                                                    "value": "Engineering Mobile Workstation/Laptop Undocked"
+                                                },
+                                                {
+                                                    "key": "9",
+                                                    "value": "Engineering Mobile Workstation/Laptop Docked"
+                                                }
+                                            ]
+                                        },
+                                        "fieldId": "selectedEngineeringClassDevice",
+                                        "validators": [
+                                            {
+                                                "type": "mandatory-validation",
+                                                "regex": null,
+                                                "message": "Please select one equipment"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "list",
+                                        "title": "Tablet",
+                                        "info": null,
+                                        "value": 2,
+                                        "parameters": {
+                                            "selectionType": "single-select",
+                                            "items": [
+                                                {
+                                                    "key": "10",
+                                                    "value": "Tablet Undocked"
+                                                },
+                                                {
+                                                    "key": "11",
+                                                    "value": "Tablet Docked"
+                                                }
+                                            ]
+                                        },
+                                        "fieldId": "selectedTabletDevice",
+                                        "validators": [
+                                            {
+                                                "type": "mandatory-validation",
+                                                "regex": null,
+                                                "message": "Please select one equipment"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please select yes or no"
+                        }
+                    ]
+                },
+                {
+                    "type": "label",
+                    "title": "NOTE: Any exception hardware or software requires a separate CSC help desk ticket.",
+                    "info": [
+                        {
+                            "type": "info-text",
+                            "caption": "Link to Exception HS/SW http://pwww.eh.pweh.com/mis/hardware_standards/index.shtml",
+                            "parameters": {
+                                "url": "http://pwww.eh.pweh.com/mis/hardware_standards/index.shtml",
+                                "urlStartIndex": 100,
+                                "urlEndIndex": 200
+                            }
+                        },
+                        {
+                            "type": "info-text",
+                            "caption": "http://pwww.eh.pweh.com/mis/software_standards/index.html",
+                            "parameters": {
+                                "url": "http://pwww.eh.pweh.com/mis/software_standards/index.html",
+                                "urlStartIndex": 0,
+                                "urlEndIndex": 200
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "title": "Choose Type of New Phone Needed:",
+                    "info": [
+                        {
+                            "type": "info-popup",
+                            "caption": "ISDN-multi call view, Analog= single call view, Phone Includes voice mail",
+                            "parameters": null
+                        }
+                    ],
+                    "value": 2,
+                    "parameters": {
+                        "selectionType": "single-select",
+                        "items": [
+                            {
+                                "key": "1",
+                                "value": "ISDN"
+                            },
+                            {
+                                "key": "2",
+                                "value": "Analog"
+                            },
+                            {
+                                "key": "3",
+                                "value": "Voip (for IAE)"
+                            }
+                        ]
+                    },
+                    "fieldId": "newPhoneType",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please select new hire type"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "title": "Existing Phone at location",
+                    "info": null,
+                    "value": null,
+                    "parameters": {
+                        "selectionType": "single-select",
+                        "items": [
+                            {
+                                "key": "1",
+                                "value": "Yes",
+                                "fields": [
+                                    {
+                                        "type": "phone-number",
+                                        "title": "Provide Phone EXT:",
+                                        "info": null,
+                                        "value": null,
+                                        "parameters": {
+                                            "maxLength": "10"
+                                        },
+                                        "fieldId": "existingPhoneExt",
+                                        "validators": [
+                                            {
+                                                "type": "mandatory-validation",
+                                                "regex": null,
+                                                "message": "Please enter Phone Number"
+                                            },
+                                            {
+                                                "type": "regex-validation",
+                                                "regex": "<phoneNumberValidationRegex>",
+                                                "message": "Invalid Phone Number"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "2",
+                                "value": "No",
+                                "fields": null
+                            }
+                        ]
+                    },
+                    "fieldId": "hasExistingPhoneAtLocation",
+                    "validators": [
+                        {
+                            "type": "mandatory-validation",
+                            "regex": null,
+                            "message": "Please select yes or no"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Computer (Network Account) and Email Accounts:",
+            "info": null,
+            "fields": [
+                {
+                    "type": "label",
+                    "title": "For P&W Salary & Hourly Employee",
+                    "info": [
+                        {
+                            "type": "info-text",
+                            "caption": "Network Accounts, LDAP & Email are automatically created on hire date once HR data is input to EV4",
+                            "parameters": null
+                        }
+                    ]
+                },
+                {
+                    "type": "label",
+                    "title": "For P&W Contractors",
+                    "info": [
+                        {
+                            "type": "info-text",
+                            "caption": "Request a Network Account, LDAP and/or Email Account",
+                            "parameters": {
+                                "url": "http://idm.utc.com/idm/user/login.jsp",
+                                "urlStartIndex": 0,
+                                "urlEndIndex": 200
+                            }
+                        },
+                        {
+                            "type": "info-text",
+                            "caption": "http://sharepoint.utc.com/corp/utcidm/oim/Pages/Default.aspx",
+                            "parameters": {
+                                "url": "http://sharepoint.utc.com/corp/utcidm/oim/Pages/Default.aspx",
+                                "urlStartIndex": 0,
+                                "urlEndIndex": 200
+                            }
+                        },
+                        {
+                            "type": "info-text",
+                            "caption": "refer to the managing U.S. based Contractors section for step-by-step instruction",
+                            "parameters": {
+                                "url": "http://pwww.eh.pweh.com/mis/idm/user_tasks.shtml",
+                                "urlStartIndex": 50,
+                                "urlEndIndex": 250
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "label",
+                    "title": "All Other ID Requests:",
+                    "info": [
+                        {
+                            "type": "info-text",
+                            "caption": "Use the following link http://pwww.eh.pweh.com/mis/Security/onlineforms/",
+                            "parameters": {
+                                "url": "http://pwww.eh.pweh.com/mis/Security/onlineforms/",
+                                "urlStartIndex": 30,
+                                "urlEndIndex": 200
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

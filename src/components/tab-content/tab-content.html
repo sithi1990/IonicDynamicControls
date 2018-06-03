@@ -1,0 +1,7 @@
+<!-- Generated template for the TabContentComponent component -->
+<ion-content *ngIf="tabsDataList.length > 0">
+  <ion-item-group *ngFor="let dataItem of tabsDataList">
+      <ion-item-divider color="light">{{dataItem.mainHeading}}</ion-item-divider>
+      <ion-item *ngFor="let item of dataItem.items">{{item.title}}</ion-item>     
+  </ion-item-group>
+</ion-content>

@@ -1,0 +1,5 @@
+<!-- Generated template for the TabsComponent component -->
+  <ion-tabs *ngIf="tabsComponentList.length > 0">
+    <ion-tab *ngFor="let tabData of tabsComponentList"  tabIcon="{{tabData.icon}}" tabTitle="{{tabData.title}}" [root]="tabData.component" [rootParams]="tabData.params" ></ion-tab>
+  </ion-tabs>
+
